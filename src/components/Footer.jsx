@@ -64,11 +64,11 @@ const Footer = () => {
                 Petros Raptopoulos
               </button>
               <p className="footer-tagline">
-                Computer Vision Researcher & AI Scientist
+                AI Software Engineer and Researcher at VeltistonAI
               </p>
               <p className="footer-description">
-                Advancing the frontiers of artificial intelligence through 
-                innovative research in computer vision and machine learning.
+                Advancing artificial intelligence through innovative research in 
+                Natural Language Processing, Large Language Models, and Multi-Agent Systems.
               </p>
             </div>
           </div>

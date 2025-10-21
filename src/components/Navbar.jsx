@@ -8,7 +8,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('about')
 
   const navItems = [
-    { id: 'about', label: 'About' },
+    { id: 'about', label: 'About Me' },
     { id: 'research-interests', label: 'Research Interests' },
     { id: 'news', label: 'News' },
     { id: 'resume', label: 'Resume' },
@@ -58,12 +58,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-content">
           <div className="navbar-brand">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="brand-link"
-            >
-              Petros Raptopoulos
-            </button>
+            
           </div>
 
           {/* Desktop Navigation */}

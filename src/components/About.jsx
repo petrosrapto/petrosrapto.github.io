@@ -5,10 +5,10 @@ import './About.css'
 
 const About = () => {
   const stats = [
-    { icon: GraduationCap, number: "5+", label: "Years of Research" },
-    { icon: Award, number: "15+", label: "Publications" },
-    { icon: Users, number: "10+", label: "Collaborations" },
-    { icon: Target, number: "3", label: "Research Areas" }
+    { icon: GraduationCap, number: "NTUA", label: "Graduate (BSc & MSc)" },
+    { icon: Award, number: "EMNLP", label: "2025 Oral Presentation" },
+    { icon: Users, number: "VeltistonAI", label: "AI Engineer & Researcher" },
+    { icon: Target, number: "NLP", label: "Research Focus" }
   ]
 
   const containerVariants = {
@@ -47,7 +47,7 @@ const About = () => {
           <motion.div variants={itemVariants} className="section-header">
             <h2>About Me</h2>
             <p className="section-subtitle">
-              Passionate about advancing the frontiers of artificial intelligence
+              AI Software Engineer and Researcher specializing in Natural Language Processing and Multi-Agent Systems
             </p>
           </motion.div>
 
@@ -55,36 +55,36 @@ const About = () => {
             <motion.div variants={itemVariants} className="about-text">
               <div className="text-content">
                 <p>
-                  I am a dedicated computer vision researcher and AI scientist with a passion for 
-                  developing innovative solutions that bridge the gap between theoretical research 
-                  and practical applications. My work focuses on advancing machine learning 
-                  techniques, particularly in the areas of deep learning, computer vision, and 
-                  artificial intelligence.
+                  I currently work at VeltistonAI, where I design and build intelligent systems that 
+                  combine multi-agent architectures with advanced retrieval and reasoning techniques. 
+                  My work focuses on developing AI systems that can understand, process, and reason 
+                  over complex information to provide intelligent solutions for real-world problems.
                 </p>
                 
                 <p>
-                  During my academic journey, I have concentrated on learning with minimal manual 
-                  supervision through self-supervised and semi-supervised learning approaches. 
-                  My research encompasses various challenging tasks including object detection, 
-                  image segmentation, and pattern recognition, with applications ranging from 
-                  medical imaging to autonomous systems.
+                  I'm also the first author of PAKTON, an open-source multi-agent framework for 
+                  question answering in long legal agreements, which has been accepted for oral 
+                  presentation at the Main Conference of EMNLP 2025. This work represents my commitment 
+                  to bridging theoretical research with practical applications in the legal domain.
                 </p>
                 
                 <p>
-                  Currently, my focus is on developing robust AI systems that can adapt to 
-                  real-world scenarios and contribute to solving complex problems across different 
-                  domains. I believe in the transformative power of AI and am committed to 
-                  conducting research that has both theoretical significance and practical impact.
+                  I am interested in PhD positions in the NLP domain and am always open to discussing 
+                  research opportunities that involve Natural Language Processing, Large Language Models, 
+                  Multi-Agent Systems, and innovative applications of AI in complex reasoning tasks. 
+                  In this space, you can learn more about my research, explore my publications, and 
+                  follow my work on AI systems for reasoning and decision-making.
                 </p>
 
                 <div className="highlights">
                   <h4>Key Highlights:</h4>
                   <ul>
-                    <li>PhD in Computer Science with focus on Computer Vision</li>
-                    <li>Extensive experience in deep learning and neural networks</li>
-                    <li>Published research in top-tier conferences and journals</li>
-                    <li>Strong background in both theoretical and applied AI</li>
-                    <li>Collaborative approach to interdisciplinary research</li>
+                    <li>Diploma (BSc & MSc) in Electrical and Computer Engineering from NTUA</li>
+                    <li>Specialization in Computer Science with focus on AI and NLP</li>
+                    <li>AI Software Engineer and Researcher at VeltistonAI</li>
+                    <li>First author of PAKTON framework (EMNLP 2025)</li>
+                    <li>Experience in Multi-Agent Systems and RAG pipelines</li>
+                    <li>Open to PhD opportunities in NLP domain</li>
                   </ul>
                 </div>
               </div>
@@ -112,14 +112,14 @@ const About = () => {
               <motion.div variants={itemVariants} className="expertise-areas">
                 <h4>Areas of Expertise</h4>
                 <div className="expertise-tags">
-                  <span className="tag">Computer Vision</span>
+                  <span className="tag">Natural Language Processing</span>
+                  <span className="tag">Large Language Models</span>
+                  <span className="tag">Multi-Agent Systems</span>
+                  <span className="tag">Retrieval-Augmented Generation</span>
+                  <span className="tag">Question Answering</span>
+                  <span className="tag">Legal AI</span>
+                  <span className="tag">AI Software Engineering</span>
                   <span className="tag">Machine Learning</span>
-                  <span className="tag">Deep Learning</span>
-                  <span className="tag">Neural Networks</span>
-                  <span className="tag">Image Processing</span>
-                  <span className="tag">Pattern Recognition</span>
-                  <span className="tag">AI Research</span>
-                  <span className="tag">Data Science</span>
                 </div>
               </motion.div>
             </motion.div>

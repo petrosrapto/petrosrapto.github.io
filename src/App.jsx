@@ -15,15 +15,18 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Petros Raptopoulos - Computer Vision Researcher & AI Scientist</title>
-        <meta name="description" content="Petros Raptopoulos is a computer vision researcher and AI scientist specializing in machine learning, deep learning, and artificial intelligence. Explore research achievements, publications, and resume." />
+        <title>Petros Raptopoulos - AI Software Engineer & NLP Researcher</title>
+        <meta name="description" content="Petros Raptopoulos is an AI Software Engineer and Researcher at VeltistonAI, specializing in Natural Language Processing, Large Language Models, Multi-Agent Systems, and RAG pipelines. NTUA graduate seeking PhD opportunities in NLP." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
       </Helmet>
       
       <div className="App">
         <Navbar />
+        <div className="construction-banner">
+          <p>⚠️ Website under construction, not finalized</p>
+        </div>
         <main>
           <Hero />
           <About />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ChevronDown, Github, Mail, Linkedin, BookOpen } from 'lucide-react'
+import { ChevronDown, Github, Mail, Linkedin, GraduationCap } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
@@ -51,75 +51,79 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="hero-image">
-            <img 
-              src="/api/placeholder/300/300" 
-              alt="Petros Raptopoulos"
-              className="profile-image"
-            />
+          <motion.div variants={itemVariants} className="hero-header">
+            <div className="hero-image">
+              <img 
+                src="/profile.jpg" 
+                alt="Petros Raptopoulos"
+                className="profile-image"
+                onError={(e) => {
+                  // Fallback to placeholder if image fails to load
+                  e.target.parentNode.innerHTML = '<div class="profile-placeholder"><span>PR</span></div>';
+                }}
+              />
+            </div>
+            <div className="hero-title-wrapper">
+              <h1 className="hero-title">
+                Petros Raptopoulos
+              </h1>
+              <p className="hero-subtitle">
+                AI Software Engineer and Researcher at VeltistonAI
+              </p>
+              <div className="hero-social-inline">
+                <a 
+                  href="https://www.linkedin.com/in/petrosrapto/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={22} />
+                </a>
+                <a 
+                  href="https://scholar.google.com/citations?user=G7paGngAAAAJ&hl=en&oi=ao" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="Google Scholar"
+                >
+                  <GraduationCap size={22} />
+                </a>
+                <a 
+                  href="https://github.com/petrosrapto" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="GitHub"
+                >
+                  <Github size={22} />
+                </a>
+                <a 
+                  href="mailto:petrosrapto@gmail.com" 
+                  className="social-link"
+                  aria-label="Email"
+                >
+                  <Mail size={22} />
+                </a>
+              </div>
+            </div>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="hero-title">
-            Petros Raptopoulos
-          </motion.h1>
-
-          <motion.p variants={itemVariants} className="hero-subtitle">
-            Computer Vision Researcher & AI Scientist
+          <motion.p variants={itemVariants} className="hero-description">
+            Hello 👋 I recently graduated from the <a href="https://www.ece.ntua.gr/en" target="_blank" rel="noopener noreferrer" className="inline-link">National Technical University of Athens (NTUA)</a> with a Diploma (BSc & MSc) in Electrical and Computer Engineering, majoring in Computer Science. My research and professional interests focus on Artificial Intelligence, particularly Natural Language Processing (NLP).
           </motion.p>
 
           <motion.p variants={itemVariants} className="hero-description">
-            Welcome! 👋 I am a passionate researcher in computer vision and artificial intelligence, 
-            dedicated to advancing the frontiers of machine learning and developing innovative solutions 
-            that bridge the gap between theoretical research and practical applications.
+            I currently work at <a href="https://www.veltiston.ai/" target="_blank" rel="noopener noreferrer" className="inline-link">VeltistonAI</a>, where I research and develop AI tools designed for real-world applications. I'm also the first author of PAKTON, accepted for oral presentation at the <a href="https://2025.emnlp.org/" target="_blank" rel="noopener noreferrer" className="inline-link">Main Conference of EMNLP 2025</a>.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">
-              Get In Touch
-              <Mail size={18} />
-            </a>
-            <a href="#publications" className="btn btn-outline">
-              View Publications
-              <BookOpen size={18} />
-            </a>
-          </motion.div>
+          <motion.p variants={itemVariants} className="hero-description">
+            I am interested in PhD positions in the NLP domain, feel free to contact me for any related opportunities.
+          </motion.p>
 
-          <motion.div variants={itemVariants} className="hero-social">
-            <a 
-              href="https://github.com/petrosrapto" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="GitHub"
-            >
-              <Github size={24} />
-            </a>
-            <a 
-              href="https://linkedin.com/in/petrosraptopoulos" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a 
-              href="https://scholar.google.com/citations?user=PLACEHOLDER" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="Google Scholar"
-            >
-              <BookOpen size={24} />
-            </a>
-            <a 
-              href="mailto:petros.raptopoulos@example.com" 
-              className="social-link"
-              aria-label="Email"
-            >
-              <Mail size={24} />
-            </a>
-          </motion.div>
+          <motion.p variants={itemVariants} className="hero-description">
+            In this space, you can learn more about my background, research and publications.
+          </motion.p>
 
           <motion.button 
             variants={itemVariants}

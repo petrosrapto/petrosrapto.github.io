@@ -1,56 +1,98 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Download, GraduationCap, Briefcase, Award, Code } from 'lucide-react'
+import { Download, GraduationCap, Briefcase, Award, Code, Trophy, FileText, Users } from 'lucide-react'
 import './Resume.css'
 
 const Resume = () => {
   const education = [
     {
-      degree: "Ph.D. in Computer Science",
-      institution: "University of Excellence",
-      year: "2020-2024",
-      description: "Dissertation: Advanced Deep Learning Techniques for Computer Vision Applications"
+      degree: "BSc & MSc in Electrical and Computer Engineering",
+      institution: "National Technical University of Athens (NTUA)",
+      year: "2019-2025",
+      grade: "8.76/10 (top 10%)",
+      description: "5-year joint degree (300 ECTS) • Major: Computer Science • Thesis: 'PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements' (Grade: 10/10)",
+      highlights: ["AI (8/10)", "Machine Learning (8/10)", "Neural Networks & Deep Learning (10/10)", "Image & Video Analysis (10/10)", "Advanced AI Topics (10/10)"]
     },
     {
-      degree: "M.Sc. in Artificial Intelligence",
-      institution: "Technical University",
-      year: "2018-2020",
-      description: "Specialized in Machine Learning and Neural Networks"
+      degree: "High School Diploma",
+      institution: "Evangelical Model High School of Smyrna",
+      year: "2016-2019",
+      grade: "19.6/20",
+      description: "University Entrance Exam: 18.576/20.000 (top 1% nationwide)"
     },
     {
-      degree: "B.Sc. in Computer Science",
-      institution: "State University",
-      year: "2014-2018",
-      description: "Graduated Summa Cum Laude, Focus on Software Engineering and Mathematics"
+      degree: "Middle School Certificate",
+      institution: "Evangelical Model Middle School of Smyrna",
+      year: "2013-2016",
+      grade: "18.8/20",
+      description: "Admitted through competitive entrance exams, ranked 56th out of 521 applicants"
     }
   ]
 
   const experience = [
     {
-      title: "Senior Research Scientist",
-      company: "AI Research Lab",
+      title: "AI Software Engineer",
+      company: "VeltistonAI",
+      location: "Athens, Greece",
       year: "2024-Present",
-      description: "Leading research projects in computer vision and deep learning, managing a team of 5 researchers."
+      description: "Research in Multi-Agent LLM Systems and RAG pipelines applied in the legal domain",
+      highlights: [
+        "LLM-powered Legal Assistant tool for contract comparison and negotiation analysis",
+        "Designed agentic, MCP-based architecture for healthcare chatbot with RAG and custom tools",
+        "Deployed LLMs on Cloud and on-premise infrastructure"
+      ]
+    }
+  ]
+
+  const publications = [
+    {
+      title: "PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+      authors: "Petros Raptopoulos, Giorgos Filandrianos, Maria Lymperaiou, Giorgos Stamou",
+      venue: "EMNLP Main Conference, Oral Presentation, 2025",
+      link: "https://arxiv.org/abs/2506.00608",
+      description: "Fully open-source, end-to-end, multi-agent LLM framework with plug-and-play capabilities for contract analysis using a novel RAG component"
+    }
+  ]
+
+  const awards = [
+    {
+      title: "State Scholarship (IKY)",
+      organization: "State Scholarships Foundation",
+      years: ["2019-2020", "2020-2021", "2022-2023"],
+      description: "For diligent students belonging to Vulnerable Social Groups"
+    }
+  ]
+
+  const competitions = [
+    {
+      title: "Greeks In AI Symposium",
+      role: "Poster Presentation",
+      year: "2025"
     },
     {
-      title: "Research Intern",
-      company: "Tech Giant Corp",
-      year: "2023",
-      description: "Developed novel algorithms for real-time object detection in autonomous vehicles."
+      title: "Athens Legal AI Hackathon 2025",
+      role: "PAKTON Demonstration",
+      organization: "Archimedes",
+      year: "2025"
     },
     {
-      title: "Graduate Research Assistant",
-      company: "University Research Center",
-      year: "2020-2024",
-      description: "Conducted research in self-supervised learning and published 10+ papers in top-tier conferences."
+      title: "PanHellenic Informatics Competition",
+      role: "Participant (28th, 29th, 30th editions)",
+      years: "2015-2018",
+      description: "Implementation of algorithmic solutions using C++"
+    },
+    {
+      title: "CanSat In Greece 2018",
+      role: "Satellite Development",
+      description: "Using Arduino"
     }
   ]
 
   const skills = [
-    { category: "Programming", items: ["Python", "PyTorch", "TensorFlow", "C++", "CUDA", "JavaScript"] },
-    { category: "AI/ML", items: ["Deep Learning", "Computer Vision", "Neural Networks", "Transformers", "GANs"] },
-    { category: "Tools", items: ["Docker", "Git", "Linux", "AWS", "Jupyter", "MLflow"] },
-    { category: "Research", items: ["Paper Writing", "Statistical Analysis", "Experimental Design", "Peer Review"] }
+    { category: "AI/ML", items: ["Multi-Agent Systems", "Large Language Models", "RAG Pipelines", "Deep Learning", "Neural Networks", "Computer Vision"] },
+    { category: "Programming", items: ["Python", "C++", "JavaScript", "PyTorch", "TensorFlow", "Arduino"] },
+    { category: "Specialized", items: ["Legal AI", "Healthcare AI", "Contract Analysis", "MCP Architecture", "Cloud Deployment"] },
+    { category: "Languages", items: ["Greek (Native)", "English (C2)", "German (B2)"] }
   ]
 
   const itemVariants = {
@@ -74,50 +116,148 @@ const Resume = () => {
           <motion.div variants={itemVariants} className="section-header">
             <h2>Resume</h2>
             <p className="section-subtitle">
-              My academic and professional journey in computer vision and AI research
+              My journey in AI, Machine Learning, and Legal Technology
             </p>
-            <a href="/resume.pdf" className="btn btn-primary" download>
+            <a href="/CV.pdf" className="btn btn-primary" download>
               <Download size={18} />
               Download PDF
             </a>
           </motion.div>
 
-          <div className="resume-grid">
-            <motion.div variants={itemVariants} className="resume-section">
-              <div className="section-title">
-                <GraduationCap size={24} />
-                <h3>Education</h3>
-              </div>
+          {/* Education Section */}
+          <motion.div variants={itemVariants} className="timeline-section">
+            <div className="section-title">
+              <GraduationCap size={24} />
+              <h3>Education</h3>
+            </div>
+            <div className="timeline">
               {education.map((edu, index) => (
-                <div key={index} className="resume-item">
-                  <div className="item-header">
-                    <h4>{edu.degree}</h4>
-                    <span className="year">{edu.year}</span>
+                <div key={index} className="timeline-item">
+                  <div className="timeline-marker">
+                    <div className="timeline-dot"></div>
+                    {index < education.length - 1 && <div className="timeline-line"></div>}
                   </div>
-                  <p className="institution">{edu.institution}</p>
-                  <p className="description">{edu.description}</p>
+                  <div className="timeline-content">
+                    <div className="item-header">
+                      <h4>{edu.degree}</h4>
+                      <span className="year">{edu.year}</span>
+                    </div>
+                    <p className="institution">{edu.institution}</p>
+                    {edu.grade && <p className="grade">Grade: {edu.grade}</p>}
+                    <p className="description">{edu.description}</p>
+                    {edu.highlights && (
+                      <div className="highlights">
+                        {edu.highlights.map((highlight, hIndex) => (
+                          <span key={hIndex} className="highlight-tag">{highlight}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
+            </div>
+          </motion.div>
+
+          {/* Experience Section */}
+          <motion.div variants={itemVariants} className="timeline-section">
+            <div className="section-title">
+              <Briefcase size={24} />
+              <h3>Professional Experience</h3>
+            </div>
+            <div className="timeline">
+              {experience.map((exp, index) => (
+                <div key={index} className="timeline-item">
+                  <div className="timeline-marker">
+                    <div className="timeline-dot"></div>
+                    {index < experience.length - 1 && <div className="timeline-line"></div>}
+                  </div>
+                  <div className="timeline-content">
+                    <div className="item-header">
+                      <h4>{exp.title}</h4>
+                      <span className="year">{exp.year}</span>
+                    </div>
+                    <p className="institution">{exp.company} • {exp.location}</p>
+                    <p className="description">{exp.description}</p>
+                    {exp.highlights && (
+                      <ul className="highlight-list">
+                        {exp.highlights.map((highlight, hIndex) => (
+                          <li key={hIndex}>{highlight}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Publications Section */}
+          <motion.div variants={itemVariants} className="timeline-section">
+            <div className="section-title">
+              <FileText size={24} />
+              <h3>Publications</h3>
+            </div>
+            <div className="timeline">
+              {publications.map((pub, index) => (
+                <div key={index} className="timeline-item">
+                  <div className="timeline-marker">
+                    <div className="timeline-dot"></div>
+                  </div>
+                  <div className="timeline-content">
+                    <div className="publication-item">
+                      <h4 className="publication-title">{pub.title}</h4>
+                      <p className="publication-authors">{pub.authors}</p>
+                      <p className="publication-venue">{pub.venue}</p>
+                      <p className="description">{pub.description}</p>
+                      <a href={pub.link} target="_blank" rel="noopener noreferrer" className="publication-link">
+                        View Paper →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Awards & Competitions Section */}
+          <div className="awards-competitions-grid">
+            <motion.div variants={itemVariants} className="timeline-section">
+              <div className="section-title">
+                <Award size={24} />
+                <h3>Honors & Awards</h3>
+              </div>
+              <div className="awards-list">
+                {awards.map((award, index) => (
+                  <div key={index} className="award-item">
+                    <h4>{award.title}</h4>
+                    <p className="institution">{award.organization}</p>
+                    <p className="award-years">{award.years.join(', ')}</p>
+                    <p className="description">{award.description}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="resume-section">
+            <motion.div variants={itemVariants} className="timeline-section">
               <div className="section-title">
-                <Briefcase size={24} />
-                <h3>Experience</h3>
+                <Trophy size={24} />
+                <h3>Competitions & Events</h3>
               </div>
-              {experience.map((exp, index) => (
-                <div key={index} className="resume-item">
-                  <div className="item-header">
-                    <h4>{exp.title}</h4>
-                    <span className="year">{exp.year}</span>
+              <div className="competitions-list">
+                {competitions.map((comp, index) => (
+                  <div key={index} className="competition-item">
+                    <h4>{comp.title}</h4>
+                    <p className="competition-role">{comp.role}</p>
+                    {comp.organization && <p className="institution">{comp.organization}</p>}
+                    <p className="year">{comp.years || comp.year}</p>
+                    {comp.description && <p className="description">{comp.description}</p>}
                   </div>
-                  <p className="institution">{exp.company}</p>
-                  <p className="description">{exp.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </motion.div>
           </div>
 
+          {/* Skills Section */}
           <motion.div variants={itemVariants} className="skills-section">
             <div className="section-title">
               <Code size={24} />
