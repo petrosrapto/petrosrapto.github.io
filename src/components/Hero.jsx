@@ -27,8 +27,8 @@ const Hero = () => {
     }
   }
 
-  const scrollToAbout = () => {
-    const element = document.getElementById('about')
+  const scrollToResearch = () => {
+    const element = document.getElementById('research-interests')
     if (element) {
       const offsetTop = element.offsetTop - 80
       window.scrollTo({
@@ -39,7 +39,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-background">
         <div className="hero-gradient"></div>
       </div>
@@ -127,9 +127,9 @@ const Hero = () => {
 
           <motion.button 
             variants={itemVariants}
-            onClick={scrollToAbout}
+            onClick={scrollToResearch}
             className="scroll-indicator"
-            aria-label="Scroll to about section"
+            aria-label="Scroll to research interests section"
           >
             <ChevronDown size={24} />
           </motion.button>

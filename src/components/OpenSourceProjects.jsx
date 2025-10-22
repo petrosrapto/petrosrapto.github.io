@@ -6,14 +6,14 @@ import './OpenSourceProjects.css'
 const OpenSourceProjects = () => {
   const projects = [
     {
-      name: "DeepVision Toolkit",
-      description: "A comprehensive Python library for computer vision tasks, featuring state-of-the-art models and easy-to-use APIs for object detection, image segmentation, and feature extraction.",
-      tech: ["Python", "PyTorch", "OpenCV", "NumPy"],
-      stats: { stars: 1284, forks: 203, watchers: 87 },
+      name: "PAKTON",
+      description: "A Multi-Agent Framework for Question Answering in Long Legal Agreements. Open-source, end-to-end solution using collaborative LLM agents and RAG for automated contract review. Accepted for oral presentation at EMNLP 2025.",
+      tech: ["Python", "LangChain", "RAG", "Multi-Agent Systems", "NLP"],
+      stats: { stars: 24, forks: 2, watchers: 0 },
       links: {
-        github: "https://github.com/petrosrapto/deepvision-toolkit",
-        demo: "https://deepvision-demo.com",
-        docs: "https://deepvision-toolkit.readthedocs.io"
+        github: "https://github.com/petrosrapto/PAKTON",
+        demo: "https://pakton.site",
+        docs: "https://pakton.site/evaluation"
       },
       featured: true
     },

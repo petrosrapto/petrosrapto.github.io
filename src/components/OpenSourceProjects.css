@@ -3,207 +3,189 @@
 }
 
 .projects-content {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2rem;
 }
 
 .project-card {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  padding: 2rem;
-  position: relative;
-  transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.5rem 0;
+  transition: none;
   display: flex;
   flex-direction: column;
 }
 
-.project-card:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
+.project-card:last-child {
+  border-bottom: none;
 }
 
 .project-card.featured {
-  border-color: var(--primary-color);
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(37, 99, 235, 0.02) 100%);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1.5rem;
 }
 
 .featured-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
+  display: none; /* Hiding the text badge for a cleaner look */
 }
 
 .project-header {
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
 }
 
 .project-name {
-  color: var(--text-primary);
-  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  cursor: pointer;
+}
+
+.project-name:hover {
+  text-decoration: underline;
 }
 
 .project-stats {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .stat {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  color: var(--text-light);
+  gap: 0.3rem;
+  color: var(--text-secondary);
   font-size: 0.85rem;
 }
 
 .stat svg {
-  color: var(--primary-color);
+  color: var(--text-secondary);
+  width: 16px;
+  height: 16px;
 }
 
 .project-description {
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  flex: 1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  max-width: 85%;
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .tech-tag {
-  background-color: var(--bg-accent);
-  color: var(--text-primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 1.5rem;
-  font-size: 0.8rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2em;
+  font-size: 0.75rem;
   font-weight: 500;
-  border: 1px solid var(--border-color);
   transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
-  background-color: var(--primary-color);
-  color: white;
-  transform: translateY(-1px);
+  background-color: rgba(59, 130, 246, 0.2);
 }
 
 .project-links {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.75rem;
+  gap: 0.4rem;
+  padding: 0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  border: 1px solid;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+  border: none;
+  color: var(--text-secondary);
 }
 
-.project-link.github {
-  background-color: #24292e;
-  color: white;
-  border-color: #24292e;
-}
-
-.project-link.github:hover {
-  background-color: #1a1e22;
-  border-color: #1a1e22;
-  color: white;
-}
-
-.project-link.demo {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
-.project-link.demo:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: white;
-}
-
-.project-link.docs {
-  background-color: transparent;
+.project-link:hover {
   color: var(--primary-color);
-  border-color: var(--primary-color);
+  text-decoration: underline;
 }
 
+.project-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.project-link.github,
+.project-link.demo,
+.project-link.docs {
+  color: var(--text-secondary);
+}
+
+.project-link.demo:hover,
 .project-link.docs:hover {
-  background-color: var(--primary-color);
-  color: white;
+  color: var(--primary-color);
 }
 
 .projects-footer {
   text-align: center;
-  padding: 2rem;
-  background-color: var(--bg-secondary);
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
+  padding: 2rem 0;
+  background-color: transparent;
+  border-top: 1px solid var(--border-light);
+  margin-top: 2rem;
 }
 
 .projects-footer p {
   color: var(--text-secondary);
   margin: 0;
+  font-size: 0.9rem;
 }
 
 .projects-footer a {
   color: var(--primary-color);
   font-weight: 500;
   margin-left: 0.5rem;
+  text-decoration: none;
 }
 
 .projects-footer a:hover {
-  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
   .project-card {
-    padding: 1.5rem;
+    padding: 1.5rem 0;
   }
   
   .featured-badge {
-    position: static;
-    align-self: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   
   .project-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .project-stats {
@@ -211,22 +193,21 @@
   }
   
   .project-links {
-    gap: 0.5rem;
+    gap: 1rem;
   }
   
   .project-link {
-    padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
-    padding: 1.25rem;
+    padding: 1.25rem 0;
   }
   
   .project-name {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   
   .project-stats {
@@ -235,17 +216,12 @@
   }
   
   .project-links {
-    justify-content: center;
-  }
-  
-  .project-link {
-    flex: 1;
-    justify-content: center;
-    min-width: 0;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
   }
   
   .tech-tag {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
   }
 }

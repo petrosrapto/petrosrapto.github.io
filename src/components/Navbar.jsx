@@ -5,10 +5,10 @@ import './Navbar.css'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('about')
+  const [activeSection, setActiveSection] = useState('hero')
 
   const navItems = [
-    { id: 'about', label: 'About Me' },
+    { id: 'hero', label: 'About Me' },
     { id: 'research-interests', label: 'Research Interests' },
     { id: 'news', label: 'News' },
     { id: 'resume', label: 'Resume' },

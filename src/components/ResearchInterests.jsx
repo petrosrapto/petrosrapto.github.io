@@ -1,45 +1,39 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Eye, Brain, Cpu, Camera, Network, Zap } from 'lucide-react'
+import { MessageSquare, Brain, Users, Shield, Database, Lightbulb } from 'lucide-react'
 import './ResearchInterests.css'
 
 const ResearchInterests = () => {
   const researchAreas = [
     {
-      icon: Eye,
-      title: "Computer Vision",
-      description: "Developing advanced algorithms for image understanding, object detection, and scene analysis. Focus on real-time applications and robust performance across diverse environments.",
-      keywords: ["Object Detection", "Image Segmentation", "Visual Recognition", "Scene Understanding"]
+      icon: MessageSquare,
+      title: "Natural Language Processing",
+      description: "Advancing natural language understanding and generation through state-of-the-art models. Focus on text analysis, sentiment understanding, machine translation, and information extraction from unstructured text."
     },
     {
       icon: Brain,
-      title: "Deep Learning",
-      description: "Designing novel neural network architectures and training methodologies. Specializing in convolutional networks, attention mechanisms, and self-supervised learning approaches.",
-      keywords: ["Neural Networks", "CNN", "Transformers", "Self-Supervised Learning"]
+      title: "Large Language Models",
+      description: "Developing and fine-tuning large-scale language models for diverse applications. Specializing in prompt engineering, model optimization, instruction tuning, and domain-specific adaptations."
     },
     {
-      icon: Cpu,
-      title: "AI for Robotics",
-      description: "Bridging computer vision and robotics through intelligent perception systems. Developing solutions for autonomous navigation, manipulation, and human-robot interaction.",
-      keywords: ["Autonomous Systems", "Robot Vision", "SLAM", "Motion Planning"]
+      icon: Users,
+      title: "Multi-Agent Systems",
+      description: "Designing collaborative AI systems where multiple agents coordinate to solve complex tasks. Focus on agent communication, task decomposition, and emergent collective intelligence."
     },
     {
-      icon: Camera,
-      title: "Medical Imaging",
-      description: "Applying AI techniques to medical image analysis for diagnostic assistance and treatment planning. Focus on interpretable models and clinical validation.",
-      keywords: ["Medical AI", "Diagnostic Imaging", "Healthcare", "Clinical Applications"]
+      icon: Shield,
+      title: "LLM Safety and Alignment",
+      description: "Ensuring large language models behave safely and align with human values. Research on reducing harmful outputs, bias mitigation, interpretability, and responsible AI deployment."
     },
     {
-      icon: Network,
-      title: "Multimodal Learning",
-      description: "Exploring the integration of multiple data modalities to create more comprehensive AI systems. Research in vision-language models and cross-modal understanding.",
-      keywords: ["Multimodal AI", "Vision-Language", "Cross-Modal", "Fusion Techniques"]
+      icon: Database,
+      title: "Retrieval-Augmented Generation (RAG)",
+      description: "Enhancing language models with external knowledge through efficient retrieval mechanisms. Building systems that combine parametric and non-parametric knowledge for accurate, up-to-date responses."
     },
     {
-      icon: Zap,
-      title: "Efficient AI",
-      description: "Developing lightweight and efficient AI models for edge deployment. Focus on model compression, quantization, and hardware-aware optimization techniques.",
-      keywords: ["Edge AI", "Model Compression", "Optimization", "Real-time Processing"]
+      icon: Lightbulb,
+      title: "Reinforcement Learning (RL) and Reasoning",
+      description: "Developing agents that learn optimal decision-making through interaction and feedback. Focus on reasoning capabilities, chain-of-thought, and combining symbolic and neural approaches."
     }
   ]
 
@@ -90,26 +84,15 @@ const ResearchInterests = () => {
                 key={index}
                 variants={itemVariants}
                 className="research-card"
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
               >
-                <div className="card-header">
-                  <div className="card-icon">
-                    <area.icon size={28} />
-                  </div>
-                  <h3>{area.title}</h3>
+                <div className="card-icon">
+                  <area.icon size={32} strokeWidth={1.5} />
                 </div>
-                
+                <h3 className="card-title">{area.title}</h3>
                 <p className="card-description">
                   {area.description}
                 </p>
-                
-                <div className="card-keywords">
-                  {area.keywords.map((keyword, keyIndex) => (
-                    <span key={keyIndex} className="keyword-tag">
-                      {keyword}
-                    </span>
-                  ))}
-                </div>
               </motion.div>
             ))}
           </div>
@@ -129,10 +112,10 @@ const ResearchInterests = () => {
               <div className="current-focus">
                 <h4>Current Focus Areas:</h4>
                 <ul>
-                  <li>Self-supervised learning for visual representation</li>
-                  <li>Efficient neural architectures for resource-constrained environments</li>
-                  <li>Interpretable AI for high-stakes applications</li>
-                  <li>Cross-modal learning and multimodal understanding</li>
+                  <li>Retrieval-augmented generation for domain-specific applications</li>
+                  <li>Multi-agent orchestration and collaboration patterns</li>
+                  <li>LLM safety mechanisms and alignment techniques</li>
+                  <li>Efficient fine-tuning and prompt optimization strategies</li>
                 </ul>
               </div>
             </div>

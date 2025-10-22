@@ -5,87 +5,108 @@
 }
 
 :root {
-  --primary-color: #1a365d;
-  --secondary-color: #2c5282;
-  --accent-color: #3182ce;
-  --text-primary: #2d3748;
-  --text-secondary: #4a5568;
-  --text-light: #718096;
+  /* Academic color palette - conservative and professional */
+  --primary-color: #003366;
+  --secondary-color: #1a4d7a;
+  --accent-color: #4a5f7f;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-light: #6b6b6b;
+  --text-muted: #8a8a8a;
   --bg-primary: #ffffff;
-  --bg-secondary: #f7fafc;
-  --bg-accent: #edf2f7;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.06);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --bg-secondary: #f8f9fa;
+  --bg-accent: #f0f2f5;
+  --border-color: #d4d4d4;
+  --border-light: #e8e8e8;
+  /* Minimal shadows for academic look */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  /* Spacing variables */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
 }
 
-/* Remove dark mode variables - keeping only light theme */
+/* Academic typography - classic serif fonts */
 body {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Georgia', 'Times New Roman', 'Garamond', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  font-size: 16px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Typography - Academic style */
+/* Typography - Traditional academic style */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Crimson Text', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Georgia', 'Times New Roman', 'Garamond', serif;
   font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 0.75em;
+  line-height: 1.4;
+  margin-bottom: 1em;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
 h1 {
-  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
   font-weight: 700;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
 }
 
 p {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
   color: var(--text-secondary);
   text-align: justify;
+  line-height: 1.8;
+  hyphens: auto;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 /* Construction Banner */
 .construction-banner {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: white;
+  background-color: #f4ecd8;
+  color: #6b4423;
   text-align: center;
   padding: 0.75rem 1rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 0.9rem;
   position: sticky;
   top: 80px;
   z-index: 90;
-  border-bottom: 3px solid #b45309;
+  border-top: 1px solid #d4c5a9;
+  border-bottom: 1px solid #d4c5a9;
 }
 
 .construction-banner p {
@@ -106,70 +127,74 @@ a:hover {
 
 /* Layout utilities */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .section {
-  padding: 5rem 0;
-  min-height: 100vh;
+  padding: 4rem 0;
+  min-height: auto;
 }
 
 .section:first-child {
-  padding-top: 8rem;
+  padding-top: 7rem;
 }
 
-/* Button styles */
+/* Button styles - academic conservative design */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
+  border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-color);
   color: white;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary-color);
+  box-shadow: none;
 }
 
 .btn-outline {
   background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--bg-secondary);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
-/* Card styles - more academic/professional */
+/* Card styles - minimal academic design */
 .card {
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
+  border-radius: 0;
   padding: 2rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   transition: all 0.2s ease;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--text-primary);
 }
 
 /* Grid utilities */
