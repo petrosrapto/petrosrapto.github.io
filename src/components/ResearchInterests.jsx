@@ -1,39 +1,39 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { MessageSquare, Brain, Users, Shield, Database, Lightbulb } from 'lucide-react'
+import { MessagesSquare, Brain, GitCompareArrows, Shield, Database, Puzzle } from 'lucide-react'
 import './ResearchInterests.css'
 
 const ResearchInterests = () => {
   const researchAreas = [
     {
-      icon: MessageSquare,
+      icon: MessagesSquare,
       title: "Natural Language Processing",
-      description: "Advancing natural language understanding and generation through state-of-the-art models. Focus on text analysis, sentiment understanding, machine translation, and information extraction from unstructured text."
+      description: "Enabling machines to understand, interpret, and generate human language, bridging the gap between human communication and computational reasoning."
     },
     {
       icon: Brain,
       title: "Large Language Models",
-      description: "Developing and fine-tuning large-scale language models for diverse applications. Specializing in prompt engineering, model optimization, instruction tuning, and domain-specific adaptations."
+      description: "Harnessing the power of large language models to capture complex patterns of language and reasoning, enabling adaptive, intelligent, and context-aware AI systems."
     },
     {
-      icon: Users,
+      icon: GitCompareArrows,
       title: "Multi-Agent Systems",
       description: "Designing collaborative AI systems where multiple agents coordinate to solve complex tasks. Focus on agent communication, task decomposition, and emergent collective intelligence."
     },
     {
       icon: Shield,
-      title: "LLM Safety and Alignment",
-      description: "Ensuring large language models behave safely and align with human values. Research on reducing harmful outputs, bias mitigation, interpretability, and responsible AI deployment."
+      title: "LLM Privacy,\nSafety and\nAlignment",
+      description: "Ensuring large language models behave safely and align with human values. Research on reducing harmful outputs, bias mitigation, interpretability, and secure AI."
     },
     {
       icon: Database,
       title: "Retrieval-Augmented Generation (RAG)",
-      description: "Enhancing language models with external knowledge through efficient retrieval mechanisms. Building systems that combine parametric and non-parametric knowledge for accurate, up-to-date responses."
+      description: "Enhancing language models with external knowledge through efficient retrieval mechanisms, enabling grounded, verifiable, and up-to-date reasoning."
     },
     {
-      icon: Lightbulb,
+      icon: Puzzle,
       title: "Reinforcement Learning (RL) and Reasoning",
-      description: "Developing agents that learn optimal decision-making through interaction and feedback. Focus on reasoning capabilities, chain-of-thought, and combining symbolic and neural approaches."
+      description: "Studying how reinforcement learning can be combined with reasoning to enable agents that learn from experience, adapt their behavior, and make rational, goal-driven decisions."
     }
   ]
 
@@ -73,9 +73,6 @@ const ResearchInterests = () => {
         >
           <motion.div variants={itemVariants} className="section-header">
             <h2>Research Interests</h2>
-            <p className="section-subtitle">
-              Exploring the intersection of artificial intelligence, computer vision, and real-world applications
-            </p>
           </motion.div>
 
           <div className="research-grid">
@@ -86,10 +83,12 @@ const ResearchInterests = () => {
                 className="research-card"
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
               >
-                <div className="card-icon">
-                  <area.icon size={32} strokeWidth={1.5} />
+                <div className="card-header">
+                  <div className="card-icon">
+                    <area.icon size={24} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="card-title">{area.title}</h3>
                 </div>
-                <h3 className="card-title">{area.title}</h3>
                 <p className="card-description">
                   {area.description}
                 </p>
@@ -104,20 +103,9 @@ const ResearchInterests = () => {
                 My research is driven by the belief that artificial intelligence should be both 
                 theoretically sound and practically impactful. I focus on developing robust, 
                 interpretable, and efficient AI systems that can address real-world challenges 
-                across various domains. Through interdisciplinary collaboration and rigorous 
-                experimentation, I aim to advance the state-of-the-art while ensuring that 
+                across various domains. Through interdisciplinary collaboration, I aim to advance the state-of-the-art while ensuring that 
                 the developed technologies are accessible and beneficial to society.
               </p>
-              
-              <div className="current-focus">
-                <h4>Current Focus Areas:</h4>
-                <ul>
-                  <li>Retrieval-augmented generation for domain-specific applications</li>
-                  <li>Multi-agent orchestration and collaboration patterns</li>
-                  <li>LLM safety mechanisms and alignment techniques</li>
-                  <li>Efficient fine-tuning and prompt optimization strategies</li>
-                </ul>
-              </div>
             </div>
           </motion.div>
         </motion.div>

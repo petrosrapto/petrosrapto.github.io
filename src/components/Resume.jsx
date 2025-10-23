@@ -89,19 +89,6 @@ const Resume = () => {
               </div>
             </div>
           </div>
-
-          <div className="resume-section">
-            <div className="resume-section-icon">
-              <Award size={20} />
-            </div>
-            <div>
-              <h3>Honors & Awards</h3>
-              <ul className="cv-list">
-                <li>State Scholarships Foundation (IKY) Scholarship for diligent students belonging to Vulnerable Social Groups (2019–2020, 2020–2021, 2022–2023)</li>
-                <li>EMNLP 2025 Oral Presentation</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 .resume {
   background-color: var(--bg-primary);
+  padding-bottom: 2rem !important;
 }
 
 .resume .section-header {
@@ -44,14 +45,14 @@
 }
 
 .resume-section {
-  margin-bottom: var(--spacing-xl);
-  padding-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
 }
 
 .resume-section:last-of-type {
   border-bottom: none;
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .resume-section-icon {

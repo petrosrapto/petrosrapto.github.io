@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Star, GitFork, Eye } from 'lucide-react'
+import { Github, ExternalLink, Star, GitFork, Eye, Bookmark } from 'lucide-react'
 import './OpenSourceProjects.css'
 
 const OpenSourceProjects = () => {
@@ -8,63 +8,21 @@ const OpenSourceProjects = () => {
     {
       name: "PAKTON",
       description: "A Multi-Agent Framework for Question Answering in Long Legal Agreements. Open-source, end-to-end solution using collaborative LLM agents and RAG for automated contract review. Accepted for oral presentation at EMNLP 2025.",
-      tech: ["Python", "LangChain", "RAG", "Multi-Agent Systems", "NLP"],
+      tech: ["NLP", "LLMs", "Multi-Agents Systems", "RAG", "LegalAI", "contracts", "legal agreements"],
       stats: { stars: 24, forks: 2, watchers: 0 },
       links: {
         github: "https://github.com/petrosrapto/PAKTON",
         demo: "https://pakton.site",
         docs: "https://pakton.site/evaluation"
-      },
-      featured: true
-    },
-    {
-      name: "Neural Architecture Search",
-      description: "Implementation of advanced neural architecture search algorithms with support for various search strategies and hardware constraints optimization.",
-      tech: ["Python", "TensorFlow", "Keras", "Docker"],
-      stats: { stars: 892, forks: 156, watchers: 45 },
-      links: {
-        github: "https://github.com/petrosrapto/nas-framework",
-        docs: "https://nas-framework.readthedocs.io"
-      },
-      featured: true
-    },
-    {
-      name: "Medical Image Analysis Suite",
-      description: "A specialized toolkit for medical image processing and analysis, including preprocessing, segmentation, and diagnostic assistance tools.",
-      tech: ["Python", "SimpleITK", "Matplotlib", "Scikit-learn"],
-      stats: { stars: 567, forks: 89, watchers: 32 },
-      links: {
-        github: "https://github.com/petrosrapto/medical-imaging-suite",
-        demo: "https://medical-demo.com"
       }
     },
     {
-      name: "Real-time Object Tracking",
-      description: "High-performance object tracking system optimized for real-time applications, supporting multiple tracking algorithms and video formats.",
-      tech: ["C++", "OpenCV", "CUDA", "Python"],
-      stats: { stars: 423, forks: 67, watchers: 28 },
+      name: "BlockChat",
+      description: "A distributed blockchain system for secure messaging and cryptocurrency transactions. Implements Proof-of-Stake consensus, cryptographic transaction validation, and peer-to-peer communication without central authority.",
+      tech: ["Distributed Systems", "Blockchain", "Proof Of Stake", "Cryptography", "Private Messages"],
+      stats: { stars: 2, forks: 1, watchers: 0 },
       links: {
-        github: "https://github.com/petrosrapto/realtime-tracking",
-        demo: "https://tracking-demo.com"
-      }
-    },
-    {
-      name: "Edge AI Optimizer",
-      description: "Tools and utilities for optimizing deep learning models for edge deployment, including quantization, pruning, and hardware-specific optimizations.",
-      tech: ["Python", "ONNX", "TensorRT", "OpenVINO"],
-      stats: { stars: 341, forks: 52, watchers: 19 },
-      links: {
-        github: "https://github.com/petrosrapto/edge-ai-optimizer"
-      }
-    },
-    {
-      name: "Vision Datasets Hub",
-      description: "A centralized repository of computer vision datasets with standardized APIs, preprocessing pipelines, and evaluation metrics.",
-      tech: ["Python", "HuggingFace", "Pandas", "AWS S3"],
-      stats: { stars: 289, forks: 41, watchers: 15 },
-      links: {
-        github: "https://github.com/petrosrapto/vision-datasets-hub",
-        docs: "https://vision-datasets.readthedocs.io"
+        github: "https://github.com/petrosrapto/DistributedSystems_23-24"
       }
     }
   ]
@@ -83,16 +41,12 @@ const OpenSourceProjects = () => {
     <section id="projects" className="section projects">
       <div className="container">
         <motion.div 
-          className="projects-content"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={itemVariants} className="section-header">
             <h2>Open Source Projects</h2>
-            <p className="section-subtitle">
-              Contributing to the open source community with tools and libraries for computer vision and AI research
-            </p>
           </motion.div>
 
           <div className="projects-grid">
@@ -101,17 +55,15 @@ const OpenSourceProjects = () => {
                 key={index}
                 variants={itemVariants}
                 className={`project-card ${project.featured ? 'featured' : ''}`}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
               >
-                {project.featured && (
-                  <div className="featured-badge">
-                    <Star size={16} />
-                    Featured
-                  </div>
-                )}
 
                 <div className="project-header">
-                  <h3 className="project-name">{project.name}</h3>
+                  <div className="project-name-wrapper">
+                    <Bookmark size={18} color="var(--text-secondary)" />
+                    <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                      <h3 className="project-name">{project.name}</h3>
+                    </a>
+                  </div>
                   <div className="project-stats">
                     <div className="stat">
                       <Star size={14} />
@@ -176,15 +128,6 @@ const OpenSourceProjects = () => {
               </motion.div>
             ))}
           </div>
-
-          <motion.div variants={itemVariants} className="projects-footer">
-            <p>
-              Explore more projects on my 
-              <a href="https://github.com/petrosrapto" target="_blank" rel="noopener noreferrer">
-                GitHub profile
-              </a>
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
