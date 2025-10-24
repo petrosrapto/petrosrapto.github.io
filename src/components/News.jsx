@@ -6,7 +6,7 @@ const News = () => {
   const newsItems = [
     {
       date: "6 November 2025",
-      title: "I will be presenting PAKTON at EMNLP 2025 in Suzhou, China. See you at 15:45 in Room A110."
+      title: "I will be presenting PAKTON at EMNLP 2025 in Suzhou, China. See you at 16:45 in Location A110."
     }, 
     {
       date: "20 August 2025",
