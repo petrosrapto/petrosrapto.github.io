@@ -100,11 +100,9 @@ const ResearchInterests = () => {
             <div className="statement-content">
               <h3>Research Philosophy</h3>
               <p>
-                My research is driven by the belief that artificial intelligence should be both 
-                theoretically sound and practically impactful. I focus on developing robust, 
-                interpretable, and efficient AI systems that can address real-world challenges 
-                across various domains. Through interdisciplinary collaboration, I aim to advance the state-of-the-art while ensuring that 
-                the developed technologies are accessible and beneficial to society.
+                My research is driven by the belief that AI should be safe, practical, and grounded in real-world needs. <br></br>
+                I focus on developing Retrieval-Augmented Generation (RAG) pipelines and Multi-Agent systems that make Large Language Models more traceable and justifiable in everyday applications. Inspired by the idea that true knowledge lies not in memorization but in knowing where to find information when needed, I design systems that retrieve and use knowledge efficiently without additional costly training. 
+                Through this work, I aim to create AI technologies that organizations and communities can trust, pushing the boundaries of the state of the art while ensuring their safe and responsible use in real-world settings.
               </p>
             </div>
           </motion.div>

@@ -1,7 +1,7 @@
 /* Updated styles for a more academic/research-like appearance */
 .news {
   background-color: white; /* Changed background color to white */
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: 2rem var(--spacing-lg) var(--spacing-xl);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
