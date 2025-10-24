@@ -4,11 +4,18 @@ Allow: /
 # Sitemap
 Sitemap: https://petrosraptopoulos.com/sitemap.xml
 
-# SEO optimization
+# SEO optimization - Allow crawling of all assets
 Allow: /assets/
+Allow: /images/
+Allow: /files/
 Allow: /*.css
 Allow: /*.js
 Allow: /*.svg
 Allow: /*.png
 Allow: /*.jpg
 Allow: /*.jpeg
+Allow: /profile.jpg
+Allow: /person-schema.json
+
+# Crawl delay (optional, can be removed if causing issues)
+# Crawl-delay: 1

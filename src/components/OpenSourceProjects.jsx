@@ -46,7 +46,19 @@ const OpenSourceProjects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={itemVariants} className="section-header">
-            <h2>Open Source Projects</h2>
+            <h2>
+              Open Source Projects
+              <a 
+                href="https://github.com/petrosrapto" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="github-icon-link"
+                aria-label="GitHub Profile"
+                title="View GitHub Profile"
+              >
+                <Github size={20} />
+              </a>
+            </h2>
           </motion.div>
 
           <div className="projects-grid">

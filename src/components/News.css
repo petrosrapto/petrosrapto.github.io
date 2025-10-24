@@ -1,5 +1,9 @@
+/* Updated styles for a more academic/research-like appearance */
 .news {
-  background-color: var(--bg-primary);
+  background-color: white; /* Changed background color to white */
+  padding: var(--spacing-xl) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .news-list {
@@ -8,17 +12,19 @@
 
 .news-item {
   display: flex;
-  gap: 1.5rem;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border-light);
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.news-item:first-child {
-  padding-top: 0;
-}
-
-.news-item:last-child {
-  border-bottom: none;
+.news-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .news-date {
@@ -26,28 +32,23 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  min-width: 140px;
-}
-
-.news-date svg {
-  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 .news-title {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  flex: 1;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {
   .news-item {
-    flex-direction: column;
-    gap: 0.5rem;
+    padding: 1rem;
   }
-  
-  .news-date {
-    min-width: auto;
+
+  .news-title {
+    font-size: 1rem;
   }
 }

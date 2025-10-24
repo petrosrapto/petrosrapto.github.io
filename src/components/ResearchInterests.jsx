@@ -8,7 +8,7 @@ const ResearchInterests = () => {
     {
       icon: MessagesSquare,
       title: "Natural Language Processing",
-      description: "Enabling machines to understand, interpret, and generate human language, bridging the gap between human communication and computational reasoning."
+      description: "Enabling machines to understand, interpret, and generate human language, bridging the gap between human communication and machine reasoning."
     },
     {
       icon: Brain,
@@ -33,7 +33,7 @@ const ResearchInterests = () => {
     {
       icon: Puzzle,
       title: "Reinforcement Learning (RL) and Reasoning",
-      description: "Studying how reinforcement learning can be combined with reasoning to enable agents that learn from experience, adapt their behavior, and make rational, goal-driven decisions."
+      description: "Studying how reinforcement learning can develop reasoning skills to enable agents that learn from experience, adapt their behavior, and make rational, goal-driven decisions."
     }
   ]
 

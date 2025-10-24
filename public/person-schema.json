@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Petros Raptopoulos",
+  "alternateName": ["Πέτρος Ραπτόπουλος", "Petros Raptopoulos"],
+  "givenName": "Petros",
+  "familyName": "Raptopoulos",
+  "jobTitle": "AI Software Engineer & NLP Researcher",
+  "description": "AI Software Engineer and Researcher at VeltistonAI, specializing in Natural Language Processing, Large Language Models, Multi-Agent Systems, and RAG pipelines. NTUA graduate seeking PhD opportunities in NLP.",
+  "url": "https://petrosraptopoulos.com/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://petrosraptopoulos.com/profile.jpg",
+    "width": 1200,
+    "height": 1200,
+    "caption": "Petros Raptopoulos - AI Software Engineer & NLP Researcher"
+  },
+  "sameAs": [
+    "https://github.com/petrosrapto",
+    "https://scholar.google.com/citations?user=G7paGngAAAAJ&hl=en&oi=ao",
+    "https://www.linkedin.com/in/petrosrapto/"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "VeltistonAI"
+  },
+  "alumniOf": {
+    "@type": "Organization",
+    "name": "National Technical University of Athens",
+    "alternateName": "NTUA"
+  },
+  "knowsAbout": [
+    "Natural Language Processing",
+    "Large Language Models",
+    "Multi-Agent Systems",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "RAG pipelines"
+  ],
+  "nationality": {
+    "@type": "Country",
+    "name": "Greece"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GR",
+    "addressRegion": "Athens"
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FileText, Github, ExternalLink, Globe, FlaskConical, Presentation, Video, FileImage } from 'lucide-react'
+import { FileText, Github, ExternalLink, Globe, FlaskConical, Presentation, Video, FileImage, GraduationCap } from 'lucide-react'
 import './Publications.css'
 
 const Publications = () => {
@@ -30,7 +30,19 @@ const Publications = () => {
     <section id="publications" className="section publications">
       <div className="container">
         <div className="section-header">
-          <h2>Publications</h2>
+          <h2>
+            Publications
+            <a 
+              href="https://scholar.google.com/citations?user=G7paGngAAAAJ&hl=en&oi=ao" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="scholar-icon-link"
+              aria-label="Google Scholar"
+              title="View on Google Scholar"
+            >
+              <GraduationCap size={20} />
+            </a>
+          </h2>
         </div>
 
         <div className="publications-list">

@@ -52,23 +52,25 @@ const Hero = () => {
           animate="visible"
         >
           <motion.div variants={itemVariants} className="hero-header">
-            <div className="hero-image">
+            <div className="hero-image" itemScope itemType="https://schema.org/Person">
               <img 
                 src="/profile.jpg" 
-                alt="Petros Raptopoulos"
+                alt="Petros Raptopoulos - AI Software Engineer & NLP Researcher"
                 className="profile-image"
+                itemProp="image"
                 onError={(e) => {
                   // Fallback to placeholder if image fails to load
                   e.target.parentNode.innerHTML = '<div class="profile-placeholder"><span>PR</span></div>';
                 }}
               />
             </div>
-            <div className="hero-title-wrapper">
+            <div className="hero-title-wrapper" itemScope itemType="https://schema.org/Person">
               <h1 className="hero-title">
-                Petros Raptopoulos
+                <span itemProp="name">Petros Raptopoulos</span>
+                <meta itemProp="alternateName" content="Πέτρος Ραπτόπουλος" />
               </h1>
               <p className="hero-subtitle">
-                AI Software Engineer and Researcher at VeltistonAI
+                <span itemProp="jobTitle">AI Software Engineer and Researcher</span> at <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization"><span itemProp="name">VeltistonAI</span></span>
               </p>
               <div className="hero-social-inline">
                 <a 
