@@ -5,8 +5,16 @@ import './News.css'
 const News = () => {
   const newsItems = [
     {
+      date: "15 April 2026",
+      title: "Accepted for PhD (starting June 2026) at UKP Lab, TU Darmstadt, under the supervision of Prof. Iryna Gurevych. Will be working on the HAICC project (Human-AI Collaboration for Cybersecurity) within ATHENE, exploring how reinforcement-learned LLM agents can advance CVE retrieval."
+    },
+    {
+      date: "7 February 2026",
+      title: "Developed Le Sésame, an interactive game and research platform exploring LLM security through adversarial secret extraction, as part of the Moonshot Interview Challenge for Mistral AI."
+    },
+    {
       date: "6 November 2025",
-      title: "I will be presenting PAKTON at EMNLP 2025 in Suzhou, China. See you at 16:45 in Location A110."
+      title: "Presented PAKTON at EMNLP 2025 in Suzhou, China"
     }, 
     {
       date: "20 August 2025",

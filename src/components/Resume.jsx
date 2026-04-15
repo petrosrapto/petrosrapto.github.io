@@ -23,6 +23,17 @@ const Resume = () => {
               <h3>Education</h3>
               <div className="cv-item">
                 <div className="cv-header">
+                  <h4>PhD in Computer Science</h4>
+                  <span className="cv-year">Jun 2026 – May 2029 (expected)</span>
+                </div>
+                <div className="cv-institution">TU Darmstadt, UKP Lab, Darmstadt, Germany</div>
+                <div className="cv-detail">Supervisor: Prof. Iryna Gurevych</div>
+                <div className="cv-detail">Project: HAICC (Human-AI Collaboration for Cybersecurity), ATHENE</div>
+                <div className="cv-detail">Research: Reinforcement-learned LLM agents for CVE (vulnerability) retrieval</div>
+              </div>
+
+              <div className="cv-item">
+                <div className="cv-header">
                   <h4>BSc & MSc in Electrical and Computer Engineering</h4>
                   <span className="cv-year">Sep 2019 – Jul 2025</span>
                 </div>
@@ -77,7 +88,7 @@ const Resume = () => {
               <div className="cv-item">
                 <div className="cv-header">
                   <h4>AI Software Engineer</h4>
-                  <span className="cv-year">Oct 2024 – Present</span>
+                  <span className="cv-year">Oct 2024 – May 2026</span>
                 </div>
                 <div className="cv-institution">VeltistonAI, Athens, Greece</div>
                 <ul className="cv-bullet-list">

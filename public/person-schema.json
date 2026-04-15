@@ -5,15 +5,15 @@
   "alternateName": ["Πέτρος Ραπτόπουλος", "Petros Raptopoulos"],
   "givenName": "Petros",
   "familyName": "Raptopoulos",
-  "jobTitle": "AI Software Engineer & NLP Researcher",
-  "description": "AI Software Engineer and Researcher at VeltistonAI, specializing in Natural Language Processing, Large Language Models, Multi-Agent Systems, and RAG pipelines. NTUA graduate seeking PhD opportunities in NLP.",
+  "jobTitle": "PhD Student & NLP Researcher",
+  "description": "PhD Student at UKP Lab, TU Darmstadt, under the supervision of Prof. Iryna Gurevych. Researching reinforcement-learned LLM agents for CVE retrieval as part of the HAICC project (ATHENE). First author of PAKTON (EMNLP 2025, oral).",
   "url": "https://petrosraptopoulos.com/",
   "image": {
     "@type": "ImageObject",
     "url": "https://petrosraptopoulos.com/profile.jpg",
     "width": 1200,
     "height": 1200,
-    "caption": "Petros Raptopoulos - AI Software Engineer & NLP Researcher"
+    "caption": "Petros Raptopoulos - PhD Student & NLP Researcher at TU Darmstadt"
   },
   "sameAs": [
     "https://github.com/petrosrapto",
@@ -22,7 +22,7 @@
   ],
   "worksFor": {
     "@type": "Organization",
-    "name": "VeltistonAI"
+    "name": "UKP Lab, TU Darmstadt"
   },
   "alumniOf": {
     "@type": "Organization",

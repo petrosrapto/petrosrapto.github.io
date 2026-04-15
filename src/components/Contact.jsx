@@ -12,7 +12,7 @@ const Contact = () => {
 
         <div className="contact-content">
           <p>
-            I'm always interested in discussing research opportunities, collaborations, or PhD positions in NLP.
+            I'm always open to discussing research collaborations, ideas, or opportunities in NLP and AI security.
             Feel free to reach out via email or connect with me on social media.
           </p>
 

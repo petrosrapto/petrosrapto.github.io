@@ -11,19 +11,15 @@ const About = () => {
 
         <div className="about-content">
           <p>
-            I recently graduated from the <a href="https://www.ece.ntua.gr/en" target="_blank" rel="noopener noreferrer">National Technical University of Athens (NTUA)</a> with a Diploma (BSc & MSc) in Electrical and Computer Engineering, majoring in Computer Science. My research and professional interests focus on Artificial Intelligence, particularly Natural Language Processing (NLP).
+            I am a PhD Student at the <a href="https://www.ukp.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer">UKP Lab</a>, <a href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer">TU Darmstadt</a>, under the supervision of <a href="https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp" target="_blank" rel="noopener noreferrer">Prof. Iryna Gurevych</a>. My research is part of the <a href="https://www.athene-center.de/" target="_blank" rel="noopener noreferrer">HAICC</a> project (Human-AI Collaboration for Cybersecurity) within <a href="https://www.athene-center.de/" target="_blank" rel="noopener noreferrer">ATHENE</a>, exploring how reinforcement-learned LLM agents can advance CVE (vulnerability) retrieval.
           </p>
           
           <p>
-            I currently work at <a href="https://www.veltiston.ai/" target="_blank" rel="noopener noreferrer">VeltistonAI</a>, where I research and develop AI tools designed for real-world applications. My work focuses on designing and building intelligent systems that combine multi-agent architectures with advanced retrieval and reasoning techniques.
+            Previously, I worked as an AI Software Engineer at <a href="https://www.veltiston.ai/" target="_blank" rel="noopener noreferrer">VeltistonAI</a>, where I researched and built Multi-Agent LLM systems and RAG pipelines for real-world applications — from legal assistants for contract analysis to agentic, MCP-based healthcare chatbots.
           </p>
-          
+
           <p>
-            I'm the first author of PAKTON, an open-source multi-agent framework for question answering in long legal agreements, which has been accepted for oral presentation at the <a href="https://2025.emnlp.org/" target="_blank" rel="noopener noreferrer">Main Conference of EMNLP 2025</a>. This work represents my commitment to bridging theoretical research with practical applications in the legal domain.
-          </p>
-          
-          <p>
-            I am interested in PhD positions in the NLP domain and am always open to discussing research opportunities that involve Natural Language Processing, Large Language Models, Multi-Agent Systems, and innovative applications of AI in complex reasoning tasks.
+            I'm the first author of PAKTON, an open-source multi-agent framework for question answering in long legal agreements, accepted for oral presentation at the <a href="https://2025.emnlp.org/" target="_blank" rel="noopener noreferrer">Main Conference of EMNLP 2025</a>. I graduated from the <a href="https://www.ece.ntua.gr/en" target="_blank" rel="noopener noreferrer">National Technical University of Athens (NTUA)</a> with a Diploma (BSc & MSc) in Electrical and Computer Engineering, majoring in Computer Science.
           </p>
 
           <div className="research-interests">
@@ -33,8 +29,8 @@ const About = () => {
               <li>Large Language Models</li>
               <li>Multi-Agent Systems</li>
               <li>Retrieval-Augmented Generation (RAG)</li>
-              <li>Question Answering</li>
-              <li>Legal AI & Document Understanding</li>
+              <li>Reinforcement Learning & Reasoning</li>
+              <li>LLM Privacy, Safety & Alignment</li>
             </ul>
           </div>
         </div>

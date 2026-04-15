@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <p>
-            © 2025 Petros Raptopoulos. All rights reserved.
+            © 2026 Petros Raptopoulos. All rights reserved.
           </p>
         </div>
       </div>

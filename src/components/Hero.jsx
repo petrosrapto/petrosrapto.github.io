@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="hero-image" itemScope itemType="https://schema.org/Person">
               <img 
                 src="/profile.jpg" 
-                alt="Petros Raptopoulos - AI Software Engineer & NLP Researcher"
+                alt="Petros Raptopoulos - NLP Researcher & PhD Student at TU Darmstadt"
                 className="profile-image"
                 itemProp="image"
                 onError={(e) => {
@@ -70,7 +70,7 @@ const Hero = () => {
                 <meta itemProp="alternateName" content="Πέτρος Ραπτόπουλος" />
               </h1>
               <p className="hero-subtitle">
-                <span itemProp="jobTitle">AI Software Engineer and Researcher</span> at <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization"><span itemProp="name">VeltistonAI</span></span>
+                <span itemProp="jobTitle">PhD Student</span> at <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization"><a href="https://www.ukp.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer" className="inline-link"><span itemProp="name">UKP Lab, TU Darmstadt</span></a></span>
               </p>
               <div className="hero-social-inline">
                 <a 
@@ -112,19 +112,11 @@ const Hero = () => {
           </motion.div>
 
           <motion.p variants={itemVariants} className="hero-description">
-            Hello 👋 I recently graduated from the <a href="https://www.ece.ntua.gr/en" target="_blank" rel="noopener noreferrer" className="inline-link">National Technical University of Athens (NTUA)</a> with a Diploma (BSc & MSc) in Electrical and Computer Engineering, majoring in Computer Science. My research and professional interests focus on Artificial Intelligence, particularly Natural Language Processing (NLP).
+            Hello 👋 I am a PhD Student at the <a href="https://www.ukp.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer" className="inline-link">UKP Lab</a>, <a href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer" className="inline-link">TU Darmstadt</a>, under the supervision of <a href="https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp" target="_blank" rel="noopener noreferrer" className="inline-link">Prof. Iryna Gurevych</a>. My research is part of the <a href="https://www.athene-center.de/" target="_blank" rel="noopener noreferrer" className="inline-link">HAICC</a> project (Human-AI Collaboration for Cybersecurity) within <a href="https://www.athene-center.de/" target="_blank" rel="noopener noreferrer" className="inline-link">ATHENE</a>, exploring how reinforcement-learned LLM agents can advance CVE (vulnerability) retrieval.
           </motion.p>
 
           <motion.p variants={itemVariants} className="hero-description">
-            I currently work at <a href="https://www.veltiston.ai/" target="_blank" rel="noopener noreferrer" className="inline-link">VeltistonAI</a>, where I research and develop AI tools designed for real-world applications. I'm also the first author of PAKTON, accepted for oral presentation at the <a href="https://2025.emnlp.org/" target="_blank" rel="noopener noreferrer" className="inline-link">Main Conference of EMNLP 2025</a>.
-          </motion.p>
-
-          <motion.p variants={itemVariants} className="hero-description">
-            I am interested in PhD positions in the NLP domain, feel free to contact me for any related opportunities.
-          </motion.p>
-
-          <motion.p variants={itemVariants} className="hero-description">
-            In this space, you can learn more about my background, research and publications.
+            Previously, I worked as an AI Software Engineer at <a href="https://www.veltiston.ai/" target="_blank" rel="noopener noreferrer" className="inline-link">VeltistonAI</a>, researching and building Multi-Agent LLM systems and RAG pipelines for real-world applications. I'm also the first author of PAKTON, accepted for oral presentation at the <a href="https://2025.emnlp.org/" target="_blank" rel="noopener noreferrer" className="inline-link">Main Conference of EMNLP 2025</a>. I graduated from the <a href="https://www.ece.ntua.gr/en" target="_blank" rel="noopener noreferrer" className="inline-link">National Technical University of Athens (NTUA)</a> with a Diploma (BSc & MSc) in Electrical and Computer Engineering, majoring in Computer Science.
           </motion.p>
 
           <motion.button 

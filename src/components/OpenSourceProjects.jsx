@@ -9,11 +9,21 @@ const OpenSourceProjects = () => {
       name: "PAKTON",
       description: "A Multi-Agent Framework for Question Answering in Long Legal Agreements. Open-source, end-to-end solution using collaborative LLM agents and RAG for automated contract review. Accepted for oral presentation at EMNLP 2025.",
       tech: ["NLP", "LLMs", "Multi-Agents Systems", "RAG", "LegalAI", "contracts", "legal agreements"],
-      stats: { stars: 24, forks: 2, watchers: 0 },
+      stats: { stars: 36, forks: 6, watchers: 0 },
       links: {
         github: "https://github.com/petrosrapto/PAKTON",
         demo: "https://pakton.site",
         docs: "https://pakton.site/evaluation"
+      }
+    },
+    {
+      name: "Le Sésame",
+      description: "An interactive game and research platform exploring LLM security through adversarial secret extraction. Features 20 guardian defense levels, 20 adversarial agents and an automated arena with ELO-rated AI-vs-AI battles. Built for the Mistral AI Interview Challenge.",
+      tech: ["LLM Security", "Adversarial Attacks", "Prompt Injection", "Jailbreaking"],
+      stats: { stars: 0, forks: 0, watchers: 0 },
+      links: {
+        github: "https://github.com/petrosrapto/LeSesame",
+        demo: "https://www.lesesame.eu/"
       }
     },
     {
